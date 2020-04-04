@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <!--css-->
+  <link rel="stylesheet" type="text/css" href="../main.css">
+  <!--google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <main class="main">
+  <section class="form-section">
+<div class="logo">
+  <img class="icon-logo" src="images/logo.svg">
+</div>
+  <div class="header">
+    <h1 class="font-light">We're</h1> 
+    <h1 class="font-bold">coming soon</h1>
+  </div>
+ <article class="article">
+  Hello fellow shoppers! We're currently building our new fashion store. 
+  Add your email below to stay up-to-date with announcements and our launch deals. 
+ </article>
+<form name="emailForm" onsubmit="validateEmail()" action="#" class="sign-up"  id="email-form">
+  <div>
+    <input name="email" id="email" type="email" placeholder="Email Address">
+    <button id="btn-signup" class="btn-sign-up">
+      <img class="arrow-icon" src="images/icon-arrow.svg">
+    </button>
+  </div>
+  <div id="alert-text" class="alert"></div>
+  
+</form>
+  </section>
+<div class="image-section-desktop">
+  <img src="images/hero-desktop.jpg" width="450" height="600">
+</div>
+</main>
+
+
+
+
+
+
+
+
+
+
+  <!--
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+-->
+<!--javascript-->
+<script src="main.js"></script>
+</body>
+</html>
