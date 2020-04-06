@@ -76,6 +76,7 @@ body{
             //background-image: url(./images/icon-error.svg);
             background-repeat:no-repeat;
             background-position: 75% 50%;
+            outline:0;
             z-index:1;
         }     
         .btn-sign-up{
@@ -92,12 +93,18 @@ body{
             -moz-box-shadow: 7px 67px 234px -30px  rgba(0,0,0,0.67);
             box-shadow: 7px 67px 234px -30px  rgba(0,0,0,0.67);
             z-index:2;
+            outline: 0;
             cursor:pointer;
             &:hover{
                 //background: $dark-grayish-red;
+                outline: 0;
                 background-image: linear-gradient(135deg, hsl(0, 55%, 83%), hsl(0, 80%, 86%));
             }
         }
+    }
+    .alert{
+        padding-left:55px;
+        color: $dark-grayish-red;
     }
 }
 

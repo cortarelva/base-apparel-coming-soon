@@ -1,36 +1,31 @@
 
-
-let btn = document.querySelector('#btn-signup');
-
-
-
-
+const mailformat = (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+const alert = document.querySelector('#alert-text');
+const btn = document.querySelector('#btn-signup');
 
 
 function validateEmail(){ 
-    let mail = document.emailForm.email;
-    let mailformat = (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/); 
-    let alert = document.querySelector('#alert-text');
-    
+    const mail = document.querySelector('#email');
 
-    if (mail.value.match(mailformat)){
+    if(mail.value.match(mailformat)){
         alert.innerHTML = "You have been added to our list!";
         mail.style.backgroundImage = "none";
+        alert.style.color = "dark-gray";
     }
-    else if(mail.value.match("")){
-        alert.innerHTML = "Please enter your email!"
+
+    else {
+        alert.innerHTML = `<div id="alert-text">Please provide a valid email address!</div>`
+        alert.style.color = "rgb(249,98,98)";
         mail.style.backgroundImage = "url(./images/icon-error.svg)";
-        mail.style.borderColor = "$soft-red";
+        mail.style.border = "1px solid rgb(249,98,98)";
+        return false;
     }
-    else{
-        alert.innerHTML = "You have entered an invalid email address!";
-        mail.style.backgroundImage = "url(./images/icon-error.svg)";
-        mail.style.borderColor = "$soft-red";
-    }
+    return true;
 }
 
 
+btn.addEventListener('click', validateEmail);
+    
 
-btn.addEventListener('click', validateEmail());
     
 
